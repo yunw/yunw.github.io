@@ -10,16 +10,25 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <style type="text/css">
-welcomcontainer {
-  color: maroon;
-  bottom: 10px;
-  /*z-index: 500;*/
-  margin-left: 40px;
-}
+
+    ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    ul li {
+        /*background-image: url(sqpurple.gif);*/
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+        padding-left: 14px;
+    }
 
 
 </style>
@@ -64,8 +73,22 @@ welcomcontainer {
           </p>
        </div>
 
-          <h3><a class="btn" role="button"><b>Find out our schedule canlendar &raquo;</b></a></h3>
-           <!-- onclick="alert('Click event triggered')" -->
+          <div class="col-md-4 calenderContainer">
+
+          <h3><a class="bg-warning btn" role="button"><b>Our calendar &raquo;</b></a></h3>
+          <p class="bg-info">
+              <ul>
+                  <li>Jun － 6/28</li>
+                  <li>Jul - 7/12,7/19</li>
+                  <li>Aug - 8/2,8/16</li>
+                  <li>Sep - 9/6, 9/20</li>
+                  <li><span style="background-color: #FFFF00">Oct - 10/4, 10/18</span></li>
+                  <li>Nov - 11/1,11/15</li>
+                  <li>Dev - 12/6,12/20</li>
+              </ul>
+
+          </p>
+              </div>
 
           <script>
               $( "a.btn" ).hover(
@@ -75,6 +98,21 @@ welcomcontainer {
                   $( this ).find( "span:last" ).remove();
                 }
               );
+
+              var d = new Date();
+              var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+              var thisMonth = monthNames[d.getMonth()]
+
+
+              var monTexts = [];
+              $("ul li").each(function() { monTexts.push($(this).text()) });
+
+              $("ul").append('<li>'+ monTexts +'</li>')
+
+              var thisMonRow = $("ul li").filter(function() {
+                  return $(this).text() == thisMonth;
+              }).closest("li");
+
                
               // $( "a.fade" ).hover(function() {
               //   $( this ).fadeOut( 100 );
@@ -82,8 +120,8 @@ welcomcontainer {
               // });
           </script>
 
-          <iframe id='cv_if1' src='http://cdn.instantcal.com/cvir.html?id=cv_nav1&theme=RE&ntype=cv_datepicker&file=http%3A%2F%2Fwww.instantcal.com%2Ftest.ics&border_radius=5' allowTransparency='true' scrolling='no' frameborder=0 height=200 width=200></iframe>
-
+          <!--<iframe id='cv_if1' src='http://cdn.instantcal.com/cvir.html?id=cv_nav1&theme=RE&ntype=cv_datepicker&file=http%3A%2F%2Fwww.instantcal.com%2Ftest.ics&border_radius=5' allowTransparency='true' scrolling='no' frameborder=0 height=200 width=200></iframe>-->
+          <!--<iframe id='cal'>Check out our calendar</iframe>-->
        </div>
 
 

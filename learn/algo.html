@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Algorithm</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <title>My projects Home</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="../css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
+</head>
+<body>
+
+<div id="page-wrapper">
+
+
+
+    <li>
+        <a href="#"><i class="fa fa-wrench fa-fw"></i> Arrays <span class="fa arrow"></span></a>
+        <ul class="nav">
+            <li>
+                <a href="#">isPrime() : Sieve of Eratosthenes</a>
+                <p class="row">
+                    找质数算法（Sieve of Eratosthenes筛法）
+                    由于一个合数总是可以分解成若干个质数的乘积，那么如果把质数（最初只知道2是质数）的倍数都去掉，那么剩下的就是质数了。
+                    例如要查找100以内的质数，首先2是质数，把2的倍数去掉；此时3没有被去掉，可认为是质数，所以把3的倍数去掉；再到5，再到7，7之后呢，因为8，9，10刚才都被去掉了，而100以内的任意合数肯定都有一个因子小于10（100的开方），所以，去掉，2，3，5，7的倍数后剩下的都是质数了。
+                    用程序可以这样解决，引入布尔类型数组a[i]，如果i是质数，a[i]=true，否则a[i]=false。那么划掉i可以表示成a[i]=false。
+                    <a href="http://www.cnblogs.com/guoxiaocong/archive/2005/12/27/305611.html">Link</a>
+                </p>
+
+            </li>
+            <li>
+                <a href="#">Next</a>
+            </li>
+
+        </ul>
+        <!-- /.nav-second-level -->
+    </li>
+
+
+    <li>
+        <a href="#"><i class="fa fa-sitemap fa-fw"></i> LinkedList <span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+            <li>
+                <a href="#">i</a>
+                <p>
+
+                </p>
+
+            </li>
+            <li>
+                <a href="#">Next</a>
+            </li>
+
+        </ul>
+        <!-- /.nav-second-level -->
+    </li>
+
+
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Flot Charts JavaScript -->
+    <script src="../js/plugins/flot/excanvas.min.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../js/plugins/flot/flot-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/sb-admin-2.js"></script>
+
+</body>
+</html>
